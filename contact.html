@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - UGRS Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-3 border-b border-slate-800">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span>📞 24/7 Intl. Hotline: +49 123 456 789</span>
+                <span class="hidden md:inline">🕒 Mon-Fri: 08:00 - 18:00 CET</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span>📍 Berlin, Germany</span>
+                <span>🌐 EN / DE / ES</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-4 h-24 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="bg-blue-700 p-2.5 rounded shadow-sm">
+                    <svg class="text-white h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold text-slate-900 leading-none font-serif">UGRS <span class="text-blue-700">Medical</span></span>
+                    <span class="text-xs text-slate-500 uppercase tracking-widest mt-1 font-medium">Center for Reconstructive Andrology</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="index.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">Home</a>
+                <a href="clinic.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">The Clinic</a>
+                <a href="procedures.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">Procedures</a>
+                <a href="recovery.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">Recovery</a>
+                <a href="contact.html" class="ml-4 bg-blue-700 text-white px-6 py-3 rounded text-sm font-bold uppercase tracking-wide text-blue-700 bg-blue-50 shadow-md">Appointments</a>
+            </nav>
+        </div>
+        <div class="md:hidden border-t border-slate-100 p-4 flex flex-col gap-2 bg-white">
+            <a href="index.html" class="text-sm font-bold text-slate-600">HOME</a>
+            <a href="clinic.html" class="text-sm font-bold text-slate-600">THE CLINIC</a>
+            <a href="procedures.html" class="text-sm font-bold text-slate-600">PROCEDURES</a>
+            <a href="recovery.html" class="text-sm font-bold text-slate-600">RECOVERY</a>
+            <a href="contact.html" class="text-sm font-bold text-blue-700">CONTACT</a>
+        </div>
+    </header>
+
+    <div class="bg-white py-16 border-b border-slate-200">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold text-slate-900 mb-4 font-serif">Start Your Journey</h1>
+            <p class="text-slate-600 max-w-xl mx-auto">Discreet, professional, and confidential. Contact us to schedule an initial consultation with Dr. Jethon and the UGRS team.</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Form -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden">
+                <!-- Decorative Privacy Badge -->
+                <div class="absolute top-4 right-4 bg-green-50 text-green-700 text-xs font-bold px-2 py-1 rounded border border-green-100 flex items-center gap-1">
+                    🔒 SSL Encrypted
+                </div>
+
+                <form class="space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6">Request Consultation</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="I am interested in..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition-colors shadow-lg">Send Inquiry</button>
+                    <p class="text-xs text-slate-400 text-center mt-4">Your information is held in strict confidence.</p>
+                </form>
+            </div>
+
+            <!-- Info & Steps -->
+            <div class="space-y-8">
+                <!-- What Happens Next -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 font-serif">What Happens Next?</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">1</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Initial Contact (24h)</h4>
+                                <p class="text-sm text-slate-500">Our medical coordinator receives your inquiry and replies securely via email.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">2</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Virtual Assessment</h4>
+                                <p class="text-sm text-slate-500">We schedule a private video consultation to discuss your case and goals.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">3</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Proposal & Booking</h4>
+                                <p class="text-sm text-slate-500">You receive a detailed medical plan and cost estimate. Surgery dates are secured.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 font-serif">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <span class="text-2xl">📍</span>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">UGRS Germany</h4>
+                                <p class="text-slate-600">Center for Reconstructive Andrology<br>Example Street 123<br>Berlin, Germany</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-2xl">📧</span>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Email</h4>
+                                <p class="text-slate-600">info@penisoperation.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-white py-16 border-t-4 border-blue-700">
+        <div class="container mx-auto px-4 text-center text-xs text-slate-500">
+            &copy; 2025 UGRS Partner Portal.
+        </div>
+    </footer>
+</body>
+</html>

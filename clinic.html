@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Clinic - UGRS Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-3 border-b border-slate-800">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span>📞 24/7 Intl. Hotline: +49 123 456 789</span>
+                <span class="hidden md:inline">🕒 Mon-Fri: 08:00 - 18:00 CET</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span>📍 Berlin, Germany</span>
+                <span>🌐 EN / DE / ES</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-4 h-24 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="bg-blue-700 p-2.5 rounded shadow-sm">
+                    <svg class="text-white h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold text-slate-900 leading-none font-serif">UGRS <span class="text-blue-700">Medical</span></span>
+                    <span class="text-xs text-slate-500 uppercase tracking-widest mt-1 font-medium">Center for Reconstructive Andrology</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="index.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">Home</a>
+                <a href="clinic.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-blue-700 bg-blue-50 rounded-md">The Clinic</a>
+                <a href="procedures.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">Procedures</a>
+                <a href="recovery.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">Recovery</a>
+                <a href="contact.html" class="ml-4 bg-blue-700 text-white px-6 py-3 rounded text-sm font-bold uppercase tracking-wide hover:bg-blue-800 shadow-md">Appointments</a>
+            </nav>
+        </div>
+        <!-- Mobile Menu Placeholder -->
+        <div class="md:hidden border-t border-slate-100 p-4 flex flex-col gap-2 bg-white">
+            <a href="index.html" class="text-sm font-bold text-slate-600">HOME</a>
+            <a href="clinic.html" class="text-sm font-bold text-blue-700">THE CLINIC</a>
+            <a href="procedures.html" class="text-sm font-bold text-slate-600">PROCEDURES</a>
+            <a href="recovery.html" class="text-sm font-bold text-slate-600">RECOVERY</a>
+            <a href="contact.html" class="text-sm font-bold text-slate-600">CONTACT</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="bg-slate-100 py-20 border-b border-slate-200">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">The Medical Center</h1>
+            <p class="text-slate-600 max-w-3xl mx-auto text-xl font-light leading-relaxed">A center of excellence dedicated to urogenital health, utilizing state-of-the-art facilities and governed by strict medical ethics.</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-16">
+        <!-- Intro Section -->
+        <div class="flex flex-col md:flex-row gap-16 items-center mb-24">
+            <div class="w-full md:w-1/2">
+                <div class="inline-block px-3 py-1 bg-slate-200 text-slate-700 text-xs font-bold uppercase tracking-widest rounded mb-6">International Standard</div>
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 font-serif">UGRS: A Legacy of Care</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed text-lg">The Center for Reconstructive Andrology (UGRS) represents the pinnacle of specialized surgical care. Our facilities are designed to provide a comfortable, private, and sterile environment for all patients.</p>
+                <p class="text-slate-600 mb-6 leading-relaxed">Located in Germany, we serve an international clientele seeking the highest quality of medical intervention.</p>
+            </div>
+            <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0674503?auto=format&fit=crop&w=600&q=80" class="rounded shadow-lg mt-8" alt="Clinic Interior">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" class="rounded shadow-lg" alt="Surgical Theater">
+            </div>
+        </div>
+
+        <!-- Doctor Profile -->
+        <div class="mb-24 bg-white rounded-xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-2/5 bg-slate-200 relative min-h-[400px]">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80" alt="Dr. Med. Representative" class="w-full h-full object-cover absolute inset-0">
+            </div>
+            <div class="p-10 md:w-3/5 flex flex-col justify-center">
+                <div class="mb-4">
+                    <h3 class="text-3xl font-bold text-slate-900 font-serif">Dr. med. Christoph Jethon</h3>
+                    <p class="text-blue-700 font-bold uppercase tracking-wide text-sm mt-2">Lead Surgeon, Department of Andrology</p>
+                </div>
+                <p class="text-slate-600 mb-8 leading-relaxed text-lg">With over 20 years of experience in reconstructive surgery, Dr. Jethon is a recognized authority in the field. He specializes in functional and aesthetic corrections.</p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold uppercase tracking-wide">Board Certified</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold uppercase tracking-wide">Urology Specialist</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Concierge Services -->
+        <div class="mb-24">
+            <div class="bg-blue-900 text-white rounded-2xl p-12 relative overflow-hidden">
+                <!-- Background decorative element -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -mr-16 -mt-16"></div>
+                
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold font-serif mb-6">Traveling from Abroad?</h2>
+                        <p class="text-slate-300 text-lg mb-8 leading-relaxed">Over 60% of our patients travel from outside Germany. We offer a full "Medical Concierge" service to ensure your trip is stress-free.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <span class="bg-blue-700 p-1 rounded text-xs">✈️</span>
+                                <span class="text-slate-200">Airport VIP Transfer Service</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="bg-blue-700 p-1 rounded text-xs">🏨</span>
+                                <span class="text-slate-200">Discounted rates at 5-star partner hotels</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="bg-blue-700 p-1 rounded text-xs">🗣️</span>
+                                <span class="text-slate-200">Translation services (English, Spanish, French)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/10 p-8 rounded-xl border border-white/20">
+                        <h3 class="font-bold text-xl mb-4">Sample Itinerary</h3>
+                        <div class="space-y-4 text-sm text-slate-300">
+                            <div class="flex gap-4">
+                                <div class="font-bold text-white w-16">Day 1</div>
+                                <div>Arrival in Berlin, Private Transfer to Hotel, Initial Consultation with Dr. Jethon.</div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="font-bold text-white w-16">Day 2</div>
+                                <div>Morning Surgery (Twilight Sedation), Afternoon return to Hotel.</div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="font-bold text-white w-16">Day 3</div>
+                                <div>Check-up at Clinic, Removal of Drains (if any).</div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="font-bold text-white w-16">Day 4</div>
+                                <div>Final clearance for travel. Fly home.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facilities -->
+        <div class="mb-24">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 font-serif">Infrastructure & Amenities</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-6"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-slate-50 p-8 rounded border border-slate-200 text-center hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="font-bold text-slate-900 mb-3 uppercase tracking-wide text-sm">ISO Certified</h3>
+                    <p class="text-slate-600 text-sm">Adhering to strict European safety standards.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded border border-slate-200 text-center hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="text-4xl mb-4">🩺</div>
+                    <h3 class="font-bold text-slate-900 mb-3 uppercase tracking-wide text-sm">Hybrid ORs</h3>
+                    <p class="text-slate-600 text-sm">Advanced operating theaters for minimally invasive work.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded border border-slate-200 text-center hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="text-4xl mb-4">🛜</div>
+                    <h3 class="font-bold text-slate-900 mb-3 uppercase tracking-wide text-sm">Private Suites</h3>
+                    <p class="text-slate-600 text-sm">Recovery rooms designed for comfort and discretion.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded border border-slate-200 text-center hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="text-4xl mb-4">❤️</div>
+                    <h3 class="font-bold text-slate-900 mb-3 uppercase tracking-wide text-sm">24/7 Care</h3>
+                    <p class="text-slate-600 text-sm">Round-the-clock nursing staff post-surgery.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16 border-t-4 border-blue-700">
+        <div class="container mx-auto px-4">
+            <div class="border-t border-slate-800 pt-8 text-xs text-slate-500 text-center">
+                &copy; 2025 UGRS Partner Portal.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

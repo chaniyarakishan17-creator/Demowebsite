@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGRS Medical - Center for Reconstructive Andrology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-3 border-b border-slate-800">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span>📞 24/7 Intl. Hotline: +49 123 456 789</span>
+                <span class="hidden md:inline">🕒 Mon-Fri: 08:00 - 18:00 CET</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span>📍 Berlin, Germany</span>
+                <span>🌐 EN / DE / ES</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-4 h-24 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="bg-blue-700 p-2.5 rounded shadow-sm">
+                    <svg class="text-white h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold text-slate-900 leading-none font-serif">UGRS <span class="text-blue-700">Medical</span></span>
+                    <span class="text-xs text-slate-500 uppercase tracking-widest mt-1 font-medium">Center for Reconstructive Andrology</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="index.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-blue-700 bg-blue-50 rounded-md">Home</a>
+                <a href="clinic.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">The Clinic</a>
+                <a href="procedures.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">Procedures</a>
+                <a href="recovery.html" class="px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 hover:text-blue-700 hover:bg-slate-50 rounded-md">Recovery</a>
+                <a href="contact.html" class="ml-4 bg-blue-700 text-white px-6 py-3 rounded text-sm font-bold uppercase tracking-wide hover:bg-blue-800 shadow-md">Appointments</a>
+            </nav>
+        </div>
+        <!-- Mobile Menu Placeholder (Simple) -->
+        <div class="md:hidden border-t border-slate-100 p-4 flex flex-col gap-2 bg-white">
+            <a href="index.html" class="text-sm font-bold text-blue-700">HOME</a>
+            <a href="clinic.html" class="text-sm font-bold text-slate-600">THE CLINIC</a>
+            <a href="procedures.html" class="text-sm font-bold text-slate-600">PROCEDURES</a>
+            <a href="recovery.html" class="text-sm font-bold text-slate-600">RECOVERY</a>
+            <a href="contact.html" class="text-sm font-bold text-slate-600">CONTACT</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[600px] flex items-center bg-slate-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/30"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-block px-4 py-2 rounded-sm bg-blue-600/20 border-l-4 border-blue-500 backdrop-blur-md mb-8">
+                    <span class="text-blue-400 font-bold uppercase tracking-widest text-xs">Excellence in Reconstructive Andrology</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">Advanced Surgical <br><span class="text-blue-300">Solutions for Men</span></h1>
+                <p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl font-light">The UGRS Partner Center provides world-class medical expertise in penile reconstruction and enhancement. Minimally invasive techniques. Maximum patient safety.</p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="contact.html" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold uppercase tracking-wide hover:bg-blue-700 shadow-xl text-center">Request Consultation →</a>
+                    <a href="procedures.html" class="bg-transparent border border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-md font-bold uppercase tracking-wide hover:bg-white/10 text-center">Explore Procedures</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="bg-blue-700 py-12 relative z-20 -mt-8 mx-4 md:mx-auto container rounded-xl shadow-xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            <div class="p-4">
+                <div class="text-4xl font-bold mb-2">15+</div>
+                <div class="text-blue-200 text-sm uppercase tracking-widest font-semibold">Years Experience</div>
+            </div>
+            <div class="p-4 border-l border-blue-600/50">
+                <div class="text-4xl font-bold mb-2">5k+</div>
+                <div class="text-blue-200 text-sm uppercase tracking-widest font-semibold">Procedures</div>
+            </div>
+            <div class="p-4 border-l border-blue-600/50">
+                <div class="text-4xl font-bold mb-2">ISO</div>
+                <div class="text-blue-200 text-sm uppercase tracking-widest font-semibold">9001 Certified</div>
+            </div>
+            <div class="p-4 border-l border-blue-600/50">
+                <div class="text-4xl font-bold mb-2">100%</div>
+                <div class="text-blue-200 text-sm uppercase tracking-widest font-semibold">Confidential</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-slate-900 mb-6 font-serif">Why Choose UGRS Partner Center?</h2>
+                <p class="text-slate-600 text-lg">We operate at the intersection of medical science and patient-centered care.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center p-8 bg-slate-50 rounded-lg border border-slate-100 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-white text-blue-700 rounded-full flex items-center justify-center mb-6 mx-auto shadow-md">🛡️</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Clinical Safety</h3>
+                    <p class="text-slate-600">Operating in full compliance with German medical standards and international hygiene protocols.</p>
+                </div>
+                <div class="text-center p-8 bg-slate-50 rounded-lg border border-slate-100 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-white text-blue-700 rounded-full flex items-center justify-center mb-6 mx-auto shadow-md">🔬</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Advanced Techniques</h3>
+                    <p class="text-slate-600">Pioneering minimally invasive surgical methods that reduce downtime.</p>
+                </div>
+                <div class="text-center p-8 bg-slate-50 rounded-lg border border-slate-100 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-white text-blue-700 rounded-full flex items-center justify-center mb-6 mx-auto shadow-md">📋</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Structured Aftercare</h3>
+                    <p class="text-slate-600">A comprehensive post-operative roadmap including specialized rehabilitation devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Meet the Surgeon -->
+    <section class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute top-4 left-4 w-full h-full border-2 border-blue-600/30 rounded-lg"></div>
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80" alt="Dr. Christoph Jethon" class="relative z-10 w-full h-auto rounded-lg shadow-xl">
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded mb-6">Medical Director</div>
+                    <h2 class="text-4xl font-bold text-slate-900 mb-6 font-serif">Dr. med. Christoph Jethon</h2>
+                    <h3 class="text-xl text-slate-500 mb-6">Specialist in Reconstructive Andrology</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+                        "Reconstructive surgery is not just about physical alteration; it is about restoring a man's confidence and quality of life. At UGRS, we do not sell dreams—we deliver medically sound, reproducible results based on German surgical precision."
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <span class="bg-blue-600 rounded-full p-1 text-white text-xs">✓</span>
+                            <span class="text-slate-700 font-medium">Over 20 Years of Specialized Experience</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="bg-blue-600 rounded-full p-1 text-white text-xs">✓</span>
+                            <span class="text-slate-700 font-medium">Thousands of Successful Procedures</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="bg-blue-600 rounded-full p-1 text-white text-xs">✓</span>
+                            <span class="text-slate-700 font-medium">Developer of Advanced Minimally Invasive Techniques</span>
+                        </li>
+                    </ul>
+                    <a href="clinic.html" class="text-blue-700 font-bold uppercase tracking-wide border-b-2 border-blue-200 hover:border-blue-700 transition-colors">Read Full Bio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: The Patient Journey -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 font-serif">Your Journey With Us</h2>
+                <p class="text-slate-600 mt-4">A streamlined, confidential, and professional process from start to finish.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Line connector for desktop -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-slate-100 -z-10"></div>
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
+                    <div class="w-24 h-24 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl font-serif mx-auto mb-6 shadow-lg border-4 border-white">1</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Consultation</h3>
+                    <p class="text-sm text-slate-500">Video assessment with our coordinator to discuss eligibility and goals.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
+                    <div class="w-24 h-24 bg-white text-blue-600 rounded-full flex items-center justify-center text-3xl font-serif mx-auto mb-6 shadow-lg border-4 border-blue-50">2</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Surgery</h3>
+                    <p class="text-sm text-slate-500">Arrival in Berlin. 60-90 minute procedure under twilight sedation.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
+                    <div class="w-24 h-24 bg-white text-blue-600 rounded-full flex items-center justify-center text-3xl font-serif mx-auto mb-6 shadow-lg border-4 border-blue-50">3</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Recovery</h3>
+                    <p class="text-sm text-slate-500">Overnight monitoring, then return to hotel. Discharge in 48 hours.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
+                    <div class="w-24 h-24 bg-white text-blue-600 rounded-full flex items-center justify-center text-3xl font-serif mx-auto mb-6 shadow-lg border-4 border-blue-50">4</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Results</h3>
+                    <p class="text-sm text-slate-500">6 months of guided traction therapy to solidify permanent gains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Stories -->
+    <section class="py-24 bg-slate-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-slate-900 mb-6 font-serif">Restoring Confidence</h2>
+                <p class="text-slate-600 text-lg">Every year, thousands of men choose to take control of their physical and mental well-being. Here are their perspectives.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-xl shadow-sm relative">
+                    <span class="absolute top-6 left-8 text-6xl text-blue-100 font-serif">"</span>
+                    <p class="text-slate-600 italic relative z-10 mb-6 leading-relaxed pt-6">I was hesitant for years, worried about the pain and the results. The team at UGRS explained the science, not the hype. The procedure was faster than I expected, and the recovery was exactly as described.</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">M</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Patient from UK</p>
+                            <p class="text-xs text-slate-400">Procedure: Lengthening</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-10 rounded-xl shadow-sm relative">
+                    <span class="absolute top-6 left-8 text-6xl text-blue-100 font-serif">"</span>
+                    <p class="text-slate-600 italic relative z-10 mb-6 leading-relaxed pt-6">The best decision I made was focusing on the post-op care. The doctors insisted on the extender device, and sticking to that routine made all the difference. Professionalism from start to finish.</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">A</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Patient from Spain</p>
+                            <p class="text-xs text-slate-400">Procedure: Enhancement</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-10 rounded-xl shadow-sm relative">
+                    <span class="absolute top-6 left-8 text-6xl text-blue-100 font-serif">"</span>
+                    <p class="text-slate-600 italic relative z-10 mb-6 leading-relaxed pt-6">Privacy was my main concern. The clinic is set up so you never feel exposed. It felt more like a high-end private health club than a hospital. Highly recommended.</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">K</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Patient from USA</p>
+                            <p class="text-xs text-slate-400">Procedure: Combined</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Medical FAQ -->
+    <section class="py-24 bg-white border-b border-slate-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 font-serif">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <details class="group bg-slate-50 rounded-lg border border-slate-200 open:bg-white open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-slate-900">
+                        <span>Are the results permanent?</span>
+                        <span class="text-blue-600 text-xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        Yes. The Ligamentolysis procedure provides permanent structural changes by releasing the suspensory ligament. However, maintaining these results requires mandatory adherence to the post-operative traction protocol for 3-6 months to prevent re-adhesion.
+                    </div>
+                </details>
+                
+                <details class="group bg-slate-50 rounded-lg border border-slate-200 open:bg-white open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-slate-900">
+                        <span>Does the procedure affect function or sensation?</span>
+                        <span class="text-blue-600 text-xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        No. The surgery is strictly anatomical and does not interfere with the urethra, nerves, or erectile tissues. Sensation and erectile function remain unchanged. Our safety protocols are specifically designed to preserve full functionality.
+                    </div>
+                </details>
+
+                <details class="group bg-slate-50 rounded-lg border border-slate-200 open:bg-white open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-slate-900">
+                        <span>How long do I need to stay in Berlin?</span>
+                        <span class="text-blue-600 text-xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        We recommend a stay of 3-4 days. This allows for the pre-operative consultation, the surgery day, and a post-operative checkup to remove drains (if used) and ensure healing is progressing correctly before you fly home.
+                    </div>
+                </details>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="contact.html" class="inline-block px-8 py-3 border border-blue-600 text-blue-700 font-bold rounded hover:bg-blue-50 transition-colors">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confidentiality Assurance -->
+    <section class="py-16 bg-slate-900 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div class="md:w-2/3">
+                <h3 class="text-2xl font-bold font-serif mb-3">Your Privacy is Paramount</h3>
+                <p class="text-slate-300 leading-relaxed">We understand the sensitive nature of these procedures. Our booking system, patient records, and clinic workflows are designed to guarantee 100% anonymity. No marketing mailers to your home, no labeled billing.</p>
+            </div>
+            <div class="md:w-1/3 text-center md:text-right">
+                <a href="contact.html" class="inline-block bg-blue-700 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded transition-colors">Discreet Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16 border-t-4 border-blue-700">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold font-serif mb-6">UGRS Medical</h3>
+                    <p class="text-sm text-slate-400">A premier international medical institution specializing in reconstructive urogenital surgery.</p>
+                </div>
+                <div>
+                    <h4 class="text-blue-500 font-bold uppercase tracking-wider text-sm mb-6">Menu</h4>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li><a href="clinic.html" class="hover:text-white">Clinic</a></li>
+                        <li><a href="procedures.html" class="hover:text-white">Procedures</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-blue-500 font-bold uppercase tracking-wider text-sm mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li>Phalloplasty</li>
+                        <li>Esthetic Penoplasty</li>
+                        <li>Corrective Surgery</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-blue-500 font-bold uppercase tracking-wider text-sm mb-6">Contact</h4>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li>+49 123 456 789</li>
+                        <li>info@penisoperation.com</li>
+                        <li>Medic Center Berlin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-xs text-slate-500 text-center">
+                &copy; 2025 UGRS Partner Portal. Medical content reviewed by Dr. C. Jethon.
+            </div>
+        </div>
+    </footer>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
